@@ -25,6 +25,10 @@ img {
   display: block;
 }
 
+.link-text {
+  color: #757575;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: var(--section-text);
@@ -175,6 +179,10 @@ body {
     ),
     url(../images/Img.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1600px;
+  margin: auto;
 }
 
 .hero-btn {
@@ -246,6 +254,7 @@ body {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--text-color);
+  margin-bottom: 10px;
 }
 
 .benefits-list {
@@ -473,8 +482,8 @@ body {
   cursor: pointer;
 }
 
-.clients-item:hover .icon-clients-log,
-.clients-item:focus .icon-clients-log {
+.clients-item-link:hover .icon-clients-log,
+.clients-item-link:focus .icon-clients-log {
   fill: var(--accent-color);
 }
 
@@ -483,6 +492,7 @@ body {
 }
 .footer-lister {
   display: flex;
+  align-items: baseline;
 }
 
 .adress-footer {
