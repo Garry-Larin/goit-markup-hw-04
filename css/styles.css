@@ -23,6 +23,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link-text {
@@ -123,6 +125,8 @@ body {
 }
 
 .contact {
+  display: flex;
+  align-items: center;
   color: var(--section-text);
   font-weight: 500;
   line-height: 1.14;
@@ -134,24 +138,12 @@ body {
   color: var(--accent-color);
 }
 
-.contact-item:hover,
-.contact-item:focus {
-  cursor: pointer;
-  color: var(--accent-color);
-}
-
-.contact-item:hover .icon-convert,
-.contact-item:focus .icon-convert {
-  cursor: pointer;
-  fill: var(--accent-color);
-}
-
 .contact-item:not(:last-child) {
   margin-right: 50px;
 }
 
 .icon-convert {
-  fill: #757575;
+  fill: currentColor;
   margin-right: 10px;
 }
 
@@ -182,14 +174,14 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   max-width: 1600px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .hero-btn {
   font-weight: 500;
   border: none;
   border-radius: 4px;
-  padding: 6px 22px;
+  padding: 10px 32px;
   font-size: 16px;
   line-height: 1.9;
   display: flex;
@@ -413,6 +405,14 @@ body {
 
 .work-examples-item:hover,
 .work-examples-item:focus {
+}
+
+.link-text {
+  display: block;
+}
+
+.link-text:hover,
+.link-text:focus {
   cursor: pointer;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -454,7 +454,7 @@ body {
   fill: #afb1b8;
 }
 
-.clients-item {
+.clients-item-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -462,6 +462,7 @@ body {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  fill: #afb1b8;
 }
 
 .clients-list {
@@ -469,22 +470,11 @@ body {
   gap: 30px;
 }
 
-.icon-clients {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  fill: #afb1b8;
-}
-
-.clients-item:hover,
-.clients-item:focus {
+.clients-item-link:hover,
+.clients-item-link:focus {
   border-color: var(--accent-color);
-  cursor: pointer;
-}
-
-.clients-item-link:hover .icon-clients-log,
-.clients-item-link:focus .icon-clients-log {
   fill: var(--accent-color);
+  cursor: pointer;
 }
 
 .work-examples-item:not(:nth-last-child(-n + 3)) {
@@ -518,7 +508,7 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var(--section-text);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .social-list-link-footer:hover,
